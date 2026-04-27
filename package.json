@@ -1,0 +1,16 @@
+{
+  "name": "clean-architecture-demo",
+  "version": "1.0.0",
+  "description": "Demo de Clean Architecture - Taller",
+  "scripts": {
+    "start": "ts-node src/main.ts",
+    "start:legacy": "ts-node src/legacy.ts",
+    "build": "tsc",
+    "start:build": "node dist/main.js"
+  },
+  "devDependencies": {
+    "@types/node": "^20.19.39",
+    "ts-node": "^10.9.0",
+    "typescript": "^5.0.0"
+  }
+}
