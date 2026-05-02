@@ -2,7 +2,7 @@
 
 Material del taller de **Clean Architecture** dictado para el curso de **Arquitectura de Software**.
 
-Reúne documentación teórica, diapositivas y diagramas utilizados en la presentación, un proyecto funcional y un ejercicio práctico de auditoría con ayuda de la skill de Clean Architecture.
+Reúne documentación teórica, diapositivas y diagramas utilizados en la presentación. Incluye un proyecto funcional y un ejercicio práctico de auditoría con ayuda de la skill de [Clean Architecture](/agents/skills/clean-architecture/SKILL.md).
 
 ---
 
@@ -29,7 +29,7 @@ clean-architecture/
     ├── domain/                            ← Capa de Dominio
     │   ├── entities/User.ts
     │   ├── value-objects/Email.ts
-    │   ├── repositories/UserRepository.ts ← Interfaz (puerto)
+    │   ├── repositories/UserRepository.ts ← Interfaz (puerto/contrato)
     │   └── errors/DomainError.ts
     │
     ├── application/                       ← Casos de Uso
@@ -45,9 +45,9 @@ clean-architecture/
     │       ├── RegisterUserPresenter.ts
     │       └── GetUsersPresenter.ts
     │
-    └── infrastructure/                    ← Detalles técnicos
+    └── infrastructure/                    ← Infraestructura
         └── repositories/
-            └── InMemoryUserRepository.ts
+            └── InMemoryUserRepository.ts  ← Implementación concreta de la interfaz (contrato)
 ```
 
 ---
@@ -98,8 +98,8 @@ npm run start:legacy
 ### Diagramas
 
 - [images/diagrama_capas.png](images/diagrama_capas.png) — Las cuatro capas de la arquitectura.
-- [images/diagrama_capas_detalle.png](images/diagrama_capas_detalle.png) — Detalle del contenido de cada capa.
-- [images/diagrama_explicado.png](images/diagrama_explicado.png) — Diagrama anotado con los elementos de cada capa y sus interacciones.
+- [images/diagrama_capas_detalle.png](images/diagrama_capas_detalle.png) — Detalle del contenido en cada capa.
+- [images/diagrama_explicado.png](images/diagrama_explicado.png) — Diagrama anotado con los elementos en cada capa y sus interacciones.
 
 ### Ejercicio práctico
 
